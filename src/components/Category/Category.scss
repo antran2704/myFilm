@@ -16,8 +16,12 @@
     font-size: 16px;
     padding: 4px 6px;
     background-color: transparent;
+    border: 1px solid $text-color;
     color: $text-color;
-    border: 1px solid #4e52bf;
     border-radius: 4px;
     cursor: pointer;
+}
+.active {
+    color: #4e52bf;
+    border: 1px solid #4e52bf;
 }

@@ -2,6 +2,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import "./Modal.scss";
 
 function Modal({ show, onClick, data, url }) {
+ 
   const movie = data[0];
   return (
     <div className={`modal_container ${show ? "show-bg" : "hide-bg"}`}>

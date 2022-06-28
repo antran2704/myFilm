@@ -2,8 +2,8 @@ import "./Category.scss";
 import * as type from "../../store/action";
 import { useDispatch } from "react-redux";
 
-function Category({ onClick }) {
-  const category = [1, 2, 3, 4, 5,6,7,8,9,10];
+function Category({ onClick ,active}) {
+  const category = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   return (
     <div className="category">
       <div className="category_wrap">
@@ -14,7 +14,7 @@ function Category({ onClick }) {
               onClick={() => {
                 onClick(item);
               }}
-              className="category_item"
+              className={`category_item ${active == item && 'active'}`}
             >
               {item}
             </button>

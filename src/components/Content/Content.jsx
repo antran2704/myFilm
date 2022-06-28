@@ -10,24 +10,17 @@ import "./Content.scss";
 import ContentItem from "./ContentItem";
 
 function Content() {
-  // const arr = "có gì đâu phải khóc";
-  // console.log(
-  //   arr
-  //     .normalize("NFD")
-  //     .replace(/ /g, "-")
-  //     .replace(/[\u0300-\u036f]/g, "")
-  //     .replace(/đ/g, "d")
-  //     .replace(/Đ/g, "D")
-  // );
+  
   const dispath = useDispatch();
+  const scroll = animateScroll
   const { MoviePage, MovieDetail } = useSelector((state) => state.movie);
   useEffect(() => {
     dispath(type.getMoviePage(1));
   }, []);
-  const scroll = animateScroll
   const [isModal, setIsModal] = useState(false);
   const [movieInfo, setMovieInfo] = useState([]);
   const [urlMovie, setUrlMovie] = useState([]);
+  const [indexPage,setIndexPage] = useState(1)
   const [loading,setLoading] = useState(false)
   const [width] = useViewport();
   function handleModal() {
@@ -43,13 +36,16 @@ function Content() {
   }
 
   const getMoviePage = async function(index) {
-    setLoading(true)
-    scroll.scrollToTop();
-    await dispath(type.getMoviePage(index));
-    console.log('hello')
-    setTimeout(() => {
-      setLoading(false)
-    },3000)
+    setIndexPage(index)
+    if(index != indexPage) {
+      setLoading(true)
+      scroll.scrollToTop();
+      await dispath(type.getMoviePage(index));
+      console.log('hello')
+      setTimeout(() => {
+        setLoading(false)
+      },3000)
+    }
   }
   return (
     <div>
@@ -92,7 +88,7 @@ function Content() {
         <AiOutlineLoading className="content_loading-icon" />
       </div>}
 
-      {MoviePage && <Category onClick={getMoviePage} />}
+      {MoviePage && <Category active={indexPage} onClick={getMoviePage} />}
     </div>
   );
 }

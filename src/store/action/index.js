@@ -21,14 +21,14 @@ export const getMoviePage = (page) => async (dispath) => {
   }
 };
 
-export const getMovie = (slug) => async (dispath) => {
+export const searchMovie = (slug) => async (dispath) => {
   try {
     const result = await request.get(
       `/phim/${slug}`
     );
     dispath({
       type: types.GET_MOVIE,
-      payload: result.data.movie,
+      payload: result.data,
     });
   } catch (error) {
     console.log("Get movie  error", error);

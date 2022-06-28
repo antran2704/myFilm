@@ -1,0 +1,21 @@
+$text-color: #dddada;
+$white-color: white;
+$color-dark: #171818;
+$color-green: #5cdf5c;
+$background-color: rgba(0, 0, 0, 0.65);
+
+// responsive
+$tablet-width: 800px;
+$mobile-width: 600px;
+
+@mixin tablet {
+  @media only screen and (max-width: $tablet-width) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media only screen and (max-width: $mobile-width) {
+    @content;
+  }
+}

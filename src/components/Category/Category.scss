@@ -1,0 +1,23 @@
+@import "../../variable.scss";
+
+.category {
+    color: blue;
+    margin-bottom: 30px;
+}
+
+.category_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.category_item {
+    font-size: 16px;
+    padding: 4px 6px;
+    background-color: transparent;
+    color: $text-color;
+    border: 1px solid #4e52bf;
+    border-radius: 4px;
+    cursor: pointer;
+}

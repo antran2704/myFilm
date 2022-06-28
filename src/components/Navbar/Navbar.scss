@@ -1,0 +1,64 @@
+@import "../../variable.scss";
+
+.navbar {
+  position: fixed;
+  padding: 0px 20px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  background-color: black;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  
+  @include mobile {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+.navbar_logo {
+  width: 120px;
+  cursor: pointer;
+}
+
+.navbar_search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.search_icon {
+  position: absolute;
+  font-size: 20px;
+  color: $text-color;
+  left: 6px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.search_input {
+  width: 0;
+  color: $white-color;
+  background-color: transparent;
+  font-size: 16px;
+  padding: 8px 10px 8px 30px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  z-index: 1;
+  cursor: pointer;
+  transition: all ease 0.4s;
+
+  &:focus {
+    width: 300px;
+    border: 1px solid white;
+    transition: all ease 0.4s;
+  }
+
+  @include mobile {
+   margin: 10px 0;
+  }
+}

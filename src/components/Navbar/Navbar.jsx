@@ -9,21 +9,21 @@ function Navbar() {
   const navigate = useNavigate()
   const inputRef = useRef()
   useEffect(() => {
-    navigate("/")
+    navigate("/myFiml")
     setValue("")
   },[])
 
   function getValue(e) {
     let keywords = e.target.value
     setValue(e.target.value)
-    keywords.length > 0 ? navigate(`search?keywords=${keywords.trim()}`) : navigate("/")
+    keywords.length > 0 ? navigate(`search?keywords=${keywords.trim()}`) : navigate("/myFiml")
   }
   function resetValue() {
     setValue('')
   }
   return (
     <div className="navbar">
-      <Link to="/">
+      <Link to="/myFiml">
         <img onClick={resetValue} className="navbar_logo" src={image.logo} alt="" />
       </Link>
       <div className="navbar_search">

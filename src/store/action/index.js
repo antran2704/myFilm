@@ -2,6 +2,7 @@ import axios from "axios";
 import * as types from "../type";
 
 export const request = axios.create({
+  baseURL: "https://ophim1.com",
   headers: {
     "content-type": "aplication/json"
   }

@@ -41,7 +41,6 @@ function Content() {
       setLoading(true)
       scroll.scrollToTop();
       await dispath(type.getMoviePage(index));
-      console.log('hello')
       setTimeout(() => {
         setLoading(false)
       },3000)

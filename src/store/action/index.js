@@ -1,16 +1,16 @@
 import axios from "axios";
 import * as types from "../type";
 
-export const request = axios.create({
-  headers: {
-    "content-type": "aplication/json"
-  }
-})
+// export const request = axios.create({
+//   headers: {
+//     "content-type": "aplication/json"
+//   }
+// })
 
 export const getMoviePage = (page) => async (dispath) => {
   try {
-    const result = await request.get(
-      `/danh-sach/phim-moi-cap-nhat?page=${page}`
+    const result = await axios.get(
+      `https://ophim1.com/danh-sach/phim-moi-cap-nhat?page=${page}`
     );
     dispath({
       type: types.GET_MOVIE_PAGE,
@@ -23,8 +23,8 @@ export const getMoviePage = (page) => async (dispath) => {
 
 export const searchMovie = (slug) => async (dispath) => {
   try {
-    const result = await request.get(
-      `/phim/${slug}`
+    const result = await axios.get(
+      `https://ophim1.com/phim/${slug}`
     );
     dispath({
       type: types.GET_MOVIE,

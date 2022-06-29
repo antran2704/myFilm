@@ -1,3 +1,4 @@
+import axios from "axios";
 import { memo, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import * as type from "../../store/action";
@@ -6,7 +7,7 @@ function ContentItem({ movieUrl, getInfo, onClick, data }) {
   const [movie, setMovie] = useState({});
   const [urlMovie, setUrlMovie] = useState({});
   useEffect(() => {
-    type.request.get(`/phim/${data.slug}`).then((res) => {
+    axios.get(`https://ophim1.com/phim/${data.slug}`).then((res) => {
       setMovie(res.data.movie);
       setUrlMovie(res.data.episodes);
     });

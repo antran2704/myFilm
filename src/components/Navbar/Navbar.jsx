@@ -23,7 +23,7 @@ function Navbar() {
   }
   return (
     <div className="navbar">
-      <Link to="/myFiml">
+      <Link to="/myFilm">
         <img onClick={resetValue} className="navbar_logo" src={image.logo} alt="" />
       </Link>
       <div className="navbar_search">

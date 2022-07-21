@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "./static/css/main.e6ad3d13.css",
-    "main.js": "./static/js/main.85fdfc31.js",
+    "main.js": "./static/js/main.5d653d75.js",
     "static/media/Netflix-Logo.png": "./static/media/Netflix-Logo.eeeb592851c8f4c229ec.png",
     "index.html": "./index.html",
     "main.e6ad3d13.css.map": "./static/css/main.e6ad3d13.css.map",
-    "main.85fdfc31.js.map": "./static/js/main.85fdfc31.js.map"
+    "main.5d653d75.js.map": "./static/js/main.5d653d75.js.map"
   },
   "entrypoints": [
     "static/css/main.e6ad3d13.css",
-    "static/js/main.85fdfc31.js"
+    "static/js/main.5d653d75.js"
   ]
 }

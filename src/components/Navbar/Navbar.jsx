@@ -9,14 +9,14 @@ function Navbar() {
   const navigate = useNavigate()
   const inputRef = useRef()
   useEffect(() => {
-    navigate("/myFiml")
+    navigate("/myFilm")
     setValue("")
   },[])
 
   function getValue(e) {
     let keywords = e.target.value
     setValue(e.target.value)
-    keywords.length > 0 ? navigate(`search?keywords=${keywords.trim()}`) : navigate("/myFiml")
+    keywords.length > 0 ? navigate(`search?keywords=${keywords.trim()}`) : navigate("/myFilm")
   }
   function resetValue() {
     setValue('')

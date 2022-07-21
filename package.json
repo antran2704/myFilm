@@ -2,7 +2,7 @@
   "name": "film",
   "version": "0.1.0",
   "proxy": "https://ophim1.com",
-  "homepage": "http://localhost:3000/",
+  "homepage": "https://antran2704.github.io/myFilm",
   "private": true,
   "dependencies": {
     "@koa/cors": "^3.3.0",
